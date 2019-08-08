@@ -27,7 +27,7 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.formLogin() // 定義當需要使用者登入時候，轉到的登入頁面。
 		        .loginPage("/authentication/require")       // login landing page  // "/mylogin.html"
-		        .loginProcessingUrl("/user/login")  // self-defined login entry url
+		        .loginProcessingUrl("/user/login")  // self-defined login entry url for summit username and password
 		        .successHandler(myAuthenticationSuccessHandler) // 自定義 Authentication成功處理 
 				.failureHandler(myAuthenctiationFailureHandler) // 自定義 Authentication失敗處理
 		        .and()
